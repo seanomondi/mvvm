@@ -1,0 +1,13 @@
+
+1)create a package within the ui package
+2)within the newly created package create a new kotlin file (new screen)
+
+--NAVIGATION--
+>PopUpTo(current screen)
+>.navigate(target screen)
+
+in navigation package;
+3)in routes.kt, create a new route for the new screen
+4)in AppNavHost.kt, create a new composable fuction of the new screen
+
+
