@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import net.ezra.navigation.ROUTE_ABOUT
+import net.ezra.navigation.ROUTE_DASHBOARD
 import net.ezra.navigation.ROUTE_HOME
 import net.ezra.navigation.ROUTE_MIT
 import net.ezra.navigation.ROUTE_SHOP
@@ -75,6 +76,19 @@ fun AboutScreen(navController: NavHostController) {
                     }
                 },
             text = "shop",
+            textAlign = TextAlign.Center,
+            color = MaterialTheme.colorScheme.onSurface
+        )
+
+        Text(
+            modifier = Modifier
+
+                .clickable {
+                    navController.navigate(ROUTE_DASHBOARD) {
+                        popUpTo(ROUTE_ABOUT) { inclusive = true }
+                    }
+                },
+            text = "dashboard",
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurface
         )

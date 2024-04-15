@@ -10,15 +10,17 @@ import androidx.navigation.compose.rememberNavController
 import net.ezra.ui.about.AboutScreen
 import net.ezra.ui.auth.LoginScreen
 import net.ezra.ui.auth.SignupScreen
+import net.ezra.ui.dashboard.DashboardScreen
 import net.ezra.ui.home.HomeScreen
 import net.ezra.ui.mit.MitScreen
 import net.ezra.ui.shop.ShopScreen
+import net.ezra.ui.splash.SplashScreen
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUTE_HOME
+    startDestination: String = ROUTE_SPLASH
 
 
 ) {
@@ -58,6 +60,14 @@ fun AppNavHost(
 
         composable(ROUTE_SHOP) {
             ShopScreen(navController)
+        }
+
+        composable(ROUTE_DASHBOARD) {
+            DashboardScreen(navController)
+        }
+
+        composable(ROUTE_SPLASH) {
+            SplashScreen(navController)
         }
 
 
